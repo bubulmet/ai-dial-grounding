@@ -21,12 +21,21 @@ By exploring this project, you will learn:
 
 1. **Start the user service:**
    ```bash
+   colima start --cpu 2 --memory 4
    docker-compose up -d
+   ...
+   docker-compose stop
+   docker-compose down
+   colima stop
    ```
 
 2. **Install dependencies:**
    ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
    pip install -r requirements.txt
+   ...
+   deactivate
    ```
 
 3. **Configure API credentials:**
